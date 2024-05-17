@@ -1,34 +1,22 @@
 import { useState } from "react";
 import css from "./Options.module.css";
+import Feedback from "../Feedback/Feedback";
 
 const Options = () => {
-  const [click, setClick] = useState(0);
-  const handelClick = (id) => {
-    setClick(click + 1);
-    console.log("click", id);
-  };
   return (
     <div>
       <ul className={css.btnList}>
         <li>
-          <button type="button" onClick={() => handelClick(1)}>
-            Good
-          </button>
+          <button type="button">Good</button>
         </li>
         <li>
-          <button type="button" onClick={() => handelClick(2)}>
-            Neutral
-          </button>
+          <button type="button">Neutral</button>
         </li>
         <li>
-          <button type="button" onClick={() => handelClick(3)}>
-            Bad
-          </button>
+          <button type="button">Bad</button>
         </li>
         <li>
-          <button type="button" onClick={() => handelClick(4)}>
-            Rest
-          </button>
+          <button type="button">Rest</button>
         </li>
       </ul>
     </div>

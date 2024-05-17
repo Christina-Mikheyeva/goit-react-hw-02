@@ -3,12 +3,12 @@ import css from "./Feddback.module.css";
 const Feedback = () => {
   return (
     <div>
-      <ul className="listFeedback">
-        <li className="feedback">Good:{}</li>
-        <li className="feedback">Natural:{}</li>
-        <li className="feedback">Bad:{}</li>
-        <li className="feedback">Total:{}</li>
-        <li className="feedback">Positive:{}</li>
+      <ul className={css.listFeedback}>
+        <li className={css.feedback}>Good: {}</li>
+        <li className={css.feedback}>Natural: {}</li>
+        <li className={css.feedback}>Bad: {}</li>
+        <li className={css.feedback}>Total: {}</li>
+        <li className={css.feedback}>Positive: {}</li>
       </ul>
     </div>
   );
