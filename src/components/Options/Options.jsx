@@ -1,10 +1,9 @@
-import { useState } from "react";
 import css from "./Options.module.css";
 
-const Options = ({ value, handeleClick, children }) => {
+const Options = ({ updateFeedback, children }) => {
   return (
     <div>
-      <button className={css.btn} type="button" onClick={handeleClick}>
+      <button className={css.btn} type="button" onClick={updateFeedback}>
         {children}
       </button>
     </div>

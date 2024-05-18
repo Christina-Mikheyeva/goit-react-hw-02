@@ -18,26 +18,31 @@ const App = () => {
     bad: 0,
   });
 
-  const handeleClickG = () => {
-    setState({ ...state, good: state.good + 1 });
-  };
+  function updateFeedback(feedbackType) {
+    setState({ ...state, feedbackType: state.feedbackType + 1 });
+  }
 
-  const handeleClickN = () => {
-    setState({ ...state, neutral: state.neutral + 1 });
-  };
+  // const handeleClickG = () => {
+  //   setState({ ...state, good: state.good + 1 });
+  // };
 
-  const handeleClickB = () => {
-    setState({ ...state, bad: state.bad + 1 });
-  };
+  // const handeleClickN = () => {
+  //   setState({ ...state, neutral: state.neutral + 1 });
+  // };
+
+  // const handeleClickB = () => {
+  //   setState({ ...state, bad: state.bad + 1 });
+  // };
 
   return (
     <>
       <Description />
-      <Options value={state.good} handeleClick={handeleClickG} />
-      <Options value={state.neutral} handeleClick={handeleClickN} />
-      <Options value={state.bad} handeleClick={handeleClickB} />
-      <Feedback />
+      <Options onClick={() => updateFeedback("good")}>Good</Options>
+      <Options onClick={() => updateFeedback("neutral")}>Neutral</Options>
+      <Options onClick={() => updateFeedback("bad")}>Bad</Options>
+      <Feedback state={state} />
     </>
   );
 };
+
 export default App;
