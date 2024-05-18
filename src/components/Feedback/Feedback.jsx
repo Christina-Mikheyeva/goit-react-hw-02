@@ -7,8 +7,8 @@ const Feedback = () => {
         <li className={css.feedback}>Good: {}</li>
         <li className={css.feedback}>Natural: {}</li>
         <li className={css.feedback}>Bad: {}</li>
-        <li className={css.feedback}>Total: {}</li>
-        <li className={css.feedback}>Positive: {}</li>
+        {/* <li className={css.feedback}>Total: {}</li>
+        <li className={css.feedback}>Positive: {}</li> */}
       </ul>
     </div>
   );
