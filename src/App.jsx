@@ -26,10 +26,7 @@ const App = () => {
     <>
       <Description />
 
-      <Options
-        state={["Good", "Bad", "Natural"]}
-        onClick={updateFeedback}
-      ></Options>
+      <Options state={["Good", "Bad", "Neutral"]} onClick={updateFeedback} />
 
       <Feedback
         good={feedback.good}

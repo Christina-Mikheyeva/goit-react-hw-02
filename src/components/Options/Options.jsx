@@ -16,3 +16,5 @@ const Options = ({ updateFeedback, state }) => {
     </div>
   );
 };
+
+export default Options;
