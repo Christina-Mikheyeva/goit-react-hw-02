@@ -13,9 +13,9 @@ import Options from "./components/Options/Options";
 
 const App = () => {
   const [feedback, setFeedback] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    Good: 0,
+    Neutral: 0,
+    Bad: 0,
   });
 
   function updateFeedback(feedbackType) {
