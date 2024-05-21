@@ -1,13 +1,18 @@
 import css from "./Options.module.css";
 
-const Options = ({ updateFeedback, children }) => {
+const Options = ({ updateFeedback, state }) => {
   return (
     <div>
-      <button className={css.btn} type="button" onClick={updateFeedback}>
-        {children}
-      </button>
+      {state.map((el) => (
+        <button
+          className={css.btn}
+          type="button"
+          onClick={() => updateFeedback(el)}
+          key={el}
+        >
+          {el}
+        </button>
+      ))}
     </div>
   );
 };
-
-export default Options;

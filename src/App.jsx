@@ -21,15 +21,16 @@ const App = () => {
   function updateFeedback(feedbackType) {
     setFeedback({ ...feedback, [feedbackType]: feedback[feedbackType] + 1 });
   }
-  const state = ["Good", "Bad", "Natural"];
+
   return (
     <>
       <Description />
-      {state.map((el) => (
-        <Options key={el} onClick={() => updateFeedback("good")}>
-          {el}
-        </Options>
-      ))}
+
+      <Options
+        state={["Good", "Bad", "Natural"]}
+        onClick={updateFeedback}
+      ></Options>
+
       <Feedback
         good={feedback.good}
         bad={feedback.bad}
