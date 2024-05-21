@@ -1,13 +1,13 @@
 import css from "./Options.module.css";
 
-const Options = ({ updateFeedback, state }) => {
+const Options = ({ onClick, state }) => {
   return (
     <div>
       {state.map((el) => (
         <button
           className={css.btn}
           type="button"
-          onClick={() => updateFeedback(el)}
+          onClick={() => onClick(el)}
           key={el}
         >
           {el}
@@ -16,5 +16,4 @@ const Options = ({ updateFeedback, state }) => {
     </div>
   );
 };
-
 export default Options;
